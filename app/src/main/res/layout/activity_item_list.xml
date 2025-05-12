@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activities.ItemListActivity">
+
+    <!-- Filter toggle buttons with EVEN MORE spacing from the top -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFilterContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/rgFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_toggle_button"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="All"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_toggle_text" />
+
+            <RadioButton
+                android:id="@+id/rbLostFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_toggle_button"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Lost"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_toggle_text" />
+
+            <RadioButton
+                android:id="@+id/rbFoundFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_toggle_button"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Found"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_toggle_text" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/listViewItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvFilterContainer" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No items found"
+        android:textColor="@color/on_background"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvFilterContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

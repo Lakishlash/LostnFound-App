@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activities.CreateAdvertActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Create a new advert"
+        android:textColor="@color/primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post type:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Toggle button style for post type selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <RadioGroup
+                        android:id="@+id/rgPostType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/surface"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <RadioButton
+                            android:id="@+id/rbLost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_toggle_button"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Lost"
+                            android:textAlignment="center"
+                            android:textColor="@drawable/selector_toggle_text" />
+
+                        <RadioButton
+                            android:id="@+id/rbFound"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_toggle_button"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Found"
+                            android:textAlignment="center"
+                            android:textColor="@drawable/selector_toggle_text" />
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Name:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Enter name of item"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Phone:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Enter contact number"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:gravity="top"
+                android:hint="Enter item description"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:padding="12dp"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Select date (DD/MM/YYYY)"
+                android:inputType="none"
+                android:padding="12dp"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Location:"
+                android:textColor="@color/on_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Enter location"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/on_surface" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="SAVE"
+                    android:textAlignment="center"
+                    android:textColor="@color/on_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
