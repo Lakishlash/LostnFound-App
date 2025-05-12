@@ -47,7 +47,7 @@ public class ItemListActivity extends AppCompatActivity {
         // Enable back button in action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Lost & Found Items");
+            getSupportActionBar().setTitle(getString(R.string.lost_found_items));
         }
 
         // Initialize views
@@ -97,12 +97,12 @@ public class ItemListActivity extends AppCompatActivity {
         if (selectedId == R.id.rbLostFilter) {
             // Filter to show only Lost items
             filteredItemsList = allItemsList.stream()
-                    .filter(item -> "Lost".equals(item.getType()))
+                    .filter(item -> getString(R.string.lost).equals(item.getType()))
                     .collect(Collectors.toList());
         } else if (selectedId == R.id.rbFoundFilter) {
             // Filter to show only Found items
             filteredItemsList = allItemsList.stream()
-                    .filter(item -> "Found".equals(item.getType()))
+                    .filter(item -> getString(R.string.found).equals(item.getType()))
                     .collect(Collectors.toList());
         } else {
             // Show all items
@@ -123,7 +123,7 @@ public class ItemListActivity extends AppCompatActivity {
         for (Item item : filteredItemsList) {
             Map<String, String> map = new HashMap<>();
             map.put("name", item.getName() + " (" + item.getType() + ")");
-            map.put("details", "Location: " + item.getLocation() + " • " + item.getDate());
+            map.put("details", getString(R.string.location) + ": " + item.getLocation() + " • " + item.getDate());
             data.add(map);
         }
 

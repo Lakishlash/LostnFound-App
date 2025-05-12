@@ -39,7 +39,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         // Enable back button in action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Item Details");
+            getSupportActionBar().setTitle(getString(R.string.item_details));
         }
 
         // Initialize views
@@ -55,7 +55,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         itemId = getIntent().getIntExtra("ITEM_ID", -1);
 
         if (itemId == -1) {
-            Toast.makeText(this, "Error: Item not found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_item_not_found, Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -73,8 +73,8 @@ public class ItemDetailActivity extends AppCompatActivity {
         item = dbHelper.getItemById(itemId);
 
         // Display item details
-        tvItemName.setText(item.getName());  // Just the name, not the type + name
-        tvItemType.setText(item.getType());  // Type displayed separately
+        tvItemName.setText(item.getName());
+        tvItemType.setText(item.getType());
         tvItemDate.setText(item.getDate());
         tvItemLocation.setText(item.getLocation());
         tvItemDescription.setText(item.getDescription());
@@ -83,16 +83,16 @@ public class ItemDetailActivity extends AppCompatActivity {
 
     private void confirmRemove() {
         new AlertDialog.Builder(this)
-                .setTitle("Remove Item")
-                .setMessage("Are you sure you want to remove this item?")
-                .setPositiveButton("Yes", (dialog, which) -> {
+                .setTitle(R.string.remove_title)
+                .setMessage(R.string.remove_confirmation)
+                .setPositiveButton(R.string.yes, (dialog, which) -> {
                     // Remove item from database
                     DatabaseHelper dbHelper = DatabaseHelper.getInstance(this);
                     dbHelper.deleteItem(itemId);
-                    Toast.makeText(this, "Item removed successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.remove_success, Toast.LENGTH_SHORT).show();
                     finish();
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(R.string.no, null)
                 .show();
     }
 

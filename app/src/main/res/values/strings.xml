@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">LostnFound App</string>
+    <string name="create_advert">CREATE A NEW ADVERT</string>
+    <string name="show_all_items">SHOW ALL LOST &amp; FOUND ITEMS</string>
+    <string name="remove">REMOVE</string>
+    <string name="item_type">Item Type</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="location">Location</string>
+    <string name="contact">Contact</string>
+    <string name="name">Name</string>
+    <string name="no_items_found">No items found</string>
+    <string name="item_details">Item Details</string>
+    <string name="lost_found_items">Lost &amp; Found Items</string>
+    <string name="all">All</string>
+    <string name="lost">Lost</string>
+    <string name="found">Found</string>
+    <string name="remove_confirmation">Are you sure you want to remove this item?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="remove_success">Item removed successfully</string>
+    <string name="error_item_not_found">Error: Item not found</string>
+    <string name="error_saving_item">Error saving item</string>
+    <string name="item_saved_success">Item saved successfully</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="location_prefix">At %1$s</string>
+    <string name="contact_prefix">Contact: %1$s</string>
+    <string name="remove_title">Remove Item</string>
+    <string name="create_advert_title">Create Advert</string>
+    <string name="connect_items">Connect lost items with their owners</string>
+    <string name="post_items">Post items you\'ve lost or found to help others</string>
 </resources>

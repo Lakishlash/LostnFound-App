@@ -46,7 +46,7 @@ public class CreateAdvertActivity extends AppCompatActivity {
         // Enable back button in action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Create Advert");
+            getSupportActionBar().setTitle(getString(R.string.create_advert_title));
         }
 
         // Initialize views
@@ -90,7 +90,7 @@ public class CreateAdvertActivity extends AppCompatActivity {
 
     private void saveItem() {
         // Get values from form
-        String type = rbLost.isChecked() ? "Lost" : "Found";
+        String type = rbLost.isChecked() ? getString(R.string.lost) : getString(R.string.found);
         String name = etName.getText().toString().trim();
         String phone = etPhone.getText().toString().trim();
         String description = etDescription.getText().toString().trim();
@@ -99,7 +99,7 @@ public class CreateAdvertActivity extends AppCompatActivity {
 
         // Validate inputs
         if (name.isEmpty() || phone.isEmpty() || description.isEmpty() || date.isEmpty() || location.isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.fill_all_fields, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -111,7 +111,7 @@ public class CreateAdvertActivity extends AppCompatActivity {
         long itemId = dbHelper.addItem(item);
 
         if (itemId != -1) {
-            Toast.makeText(this, "Item saved successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.item_saved_success, Toast.LENGTH_SHORT).show();
             // Clear form
             etName.setText("");
             etPhone.setText("");
@@ -123,7 +123,7 @@ public class CreateAdvertActivity extends AppCompatActivity {
             // Finish activity
             finish();
         } else {
-            Toast.makeText(this, "Error saving item", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_saving_item, Toast.LENGTH_SHORT).show();
         }
     }
 

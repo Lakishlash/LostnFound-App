@@ -7,15 +7,15 @@
     android:background="@color/background"
     tools:context=".activities.ItemListActivity">
 
-    <!-- Filter toggle buttons with EVEN MORE spacing from the top -->
+    <!-- Filter toggle buttons with MORE spacing from the top -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cvFilterContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="24dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/filter_top_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:background="@color/surface"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="@dimen/text_margin">
 
             <RadioButton
                 android:id="@+id/rbAll"
@@ -38,8 +38,8 @@
                 android:button="@null"
                 android:checked="true"
                 android:gravity="center"
-                android:padding="8dp"
-                android:text="All"
+                android:padding="@dimen/text_padding"
+                android:text="@string/all"
                 android:textAlignment="center"
                 android:textColor="@drawable/selector_toggle_text" />
 
@@ -51,8 +51,8 @@
                 android:background="@drawable/selector_toggle_button"
                 android:button="@null"
                 android:gravity="center"
-                android:padding="8dp"
-                android:text="Lost"
+                android:padding="@dimen/text_padding"
+                android:text="@string/lost"
                 android:textAlignment="center"
                 android:textColor="@drawable/selector_toggle_text" />
 
@@ -64,8 +64,8 @@
                 android:background="@drawable/selector_toggle_button"
                 android:button="@null"
                 android:gravity="center"
-                android:padding="8dp"
-                android:text="Found"
+                android:padding="@dimen/text_padding"
+                android:text="@string/found"
                 android:textAlignment="center"
                 android:textColor="@drawable/selector_toggle_text" />
         </RadioGroup>
@@ -75,12 +75,12 @@
         android:id="@+id/listViewItems"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/item_vertical_spacing"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/item_vertical_spacing"
         android:divider="@android:color/transparent"
-        android:dividerHeight="8dp"
+        android:dividerHeight="@dimen/text_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,9 +90,9 @@
         android:id="@+id/tvEmpty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No items found"
+        android:text="@string/no_items_found"
         android:textColor="@color/on_background"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_medium"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

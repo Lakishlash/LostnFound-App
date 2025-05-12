@@ -11,8 +11,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:paddingTop="24dp"
+        android:layout_marginBottom="@dimen/item_vertical_spacing"
+        android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_constraintBottom_toTopOf="@+id/cvRemove"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,40 +20,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Removed the title header that was redundant -->
+            android:padding="@dimen/item_vertical_spacing">
 
             <!-- Item Type -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="@dimen/action_bar_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Item Type"
+                        android:text="@string/item_type"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="Lost" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -62,32 +60,32 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/card_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name"
+                        android:text="@string/name"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="iPhone" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -96,32 +94,32 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/card_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Description"
+                        android:text="@string/description"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="Apple phone" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -130,32 +128,32 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/card_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Date"
+                        android:text="@string/date"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="13/05/2025" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -164,32 +162,32 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/card_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Location"
+                        android:text="@string/location"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemLocation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="Burwood" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -198,32 +196,32 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/card_spacing"
                 app:cardBackgroundColor="@color/surface"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Contact"
+                        android:text="@string/contact"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_size_small"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvItemContact"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:textColor="@color/on_surface"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_size_normal"
                         tools:text="0449005631" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -234,12 +232,12 @@
         android:id="@+id/cvRemove"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/bottom_button_margin"
         app:cardBackgroundColor="@color/primary"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="@dimen/button_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -247,11 +245,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="REMOVE"
+            android:padding="@dimen/item_vertical_spacing"
+            android:text="@string/remove"
             android:textAlignment="center"
             android:textColor="@color/on_primary"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
