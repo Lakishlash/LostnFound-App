@@ -7,7 +7,7 @@
     android:background="@color/background"
     tools:context=".activities.ItemDetailActivity">
 
-    <!-- Added padding at the top to prevent overlap with action bar -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"

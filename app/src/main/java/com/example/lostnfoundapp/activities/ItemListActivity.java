@@ -40,7 +40,7 @@ public class ItemListActivity extends AppCompatActivity {
             // Set status bar to white/light color
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
 
-            // Use dark icons (black) on light background
+            // Use dark icons on light background
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
 
